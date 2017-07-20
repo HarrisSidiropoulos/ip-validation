@@ -2,7 +2,7 @@
 import { expect } from 'chai';
 import isValidIP from './index';
 
-describe('Sollution', () => {
+describe('Solution', () => {
   describe('Some valid inputs', () => {
     it('should 0.0.0.0 return true', () => {
       expect(isValidIP('0.0.0.0')).to.be.true;
@@ -41,6 +41,9 @@ describe('Sollution', () => {
     });
     it('should 123.045.067.089 return false', () => {
       expect(isValidIP('123.045.067.089')).to.be.false;
+    });
+    it('should 123,45,67,89 return false', () => {
+      expect(isValidIP('123,45,67,89')).to.be.false;
     });
   });
 });
